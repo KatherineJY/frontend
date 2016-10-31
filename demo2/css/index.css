@@ -1,0 +1,115 @@
+body{
+	width:100%;
+	/*height:auto;*/
+	background: #ffffff;
+	font-size: 20px;
+	font-family: SimHei,Candara;
+	line-height: 2;
+
+}
+/*------------nav------------------*/
+.nav{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	padding: 2px 5px 0 5px;
+	top:0;
+	z-index: 100;
+	box-sizing: border-box;
+	background: #fbc8ad;
+}
+.nav::after{
+	content:'.';
+	display: block;
+	clear: both;
+	height: 0;	width: 0;
+	visibility: hidden;
+}
+.logo{
+	width:150px;	height:50px;
+	background: url("../img/logo.png") center center/cover;
+	background-size:100% 100%;
+	display: inline-block;
+}
+.nav-icon{
+	width:30px;	height: 30px;
+	border-radius: 8px;
+	display: inline-block;
+	border: 0.5px solid #e86423;
+	margin: 8px 3px 0 3px;
+	position: relative;
+	float: right;
+	transition: 0.3s ease-in-out;
+	box-shadow: 1px 1px 3px rgba(54, 48, 48, 0.44);
+}
+.search{
+	will-change:transform;
+}
+.search:hover{
+	width:calc( 100% - 250px );
+	box-shadow: inset 0 0 0.5px #fff,
+               inset 0 0 1px #fff,
+               inset 0 0 1.5px #fff,
+               inset 0 0 2.1px #fff,
+               inset 0 0 2.6px #ff9935,
+               inset 0 0 3.1px #ff9935,
+               inset 0 0 3.6px #ff9935,
+               1px 1px 3px rgba(54, 48, 48, 0.44);
+}
+/*------------menu------------------*/
+.bannerHolder{
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
+	box-shadow: 0 5px 10px rgba(54, 48, 48, 0.44);
+	background: url("../img/bg3.jpg") center center/cover;
+}
+.blockHolder{
+	width: 100%;
+	margin: auto;
+	padding: 20px 20px 20px 20px;
+	height: 400px;
+	box-sizing: border-box;
+	box-shadow: inset 0 5px 8px rgba(54, 48, 48, 0.44);
+	outline:2px dashed #fff;
+	outline-offset: -12px;
+	overflow: scroll;
+	/*border-radius: 8px;*/
+}
+.titleBox{
+	width: 90%;
+	height: 30px;
+	margin: auto;
+	font-size: 1.2rem;
+	border-bottom: 0.5px solid #fff;
+}
+.more-icon{
+	width: 20px;	height: 20px;
+	border-radius: 8px;
+	margin-top: 2px;
+	margin-right: 5px;
+	outline:0.5px solid #fff;
+	display: inline-block;
+	float:right;
+}
+#life{
+	background: #fafbd1;
+	/*box-shadow: 2px 2px 50px #d4eac7;*/
+}
+#movie{
+	background: #ddf2c9;
+}
+#music{
+	background: #a9d6b9;
+}
+#news{
+	background: #76bcb4;
+}
+#words{
+	background: #5fa5a7;
+}
+.contentBox{
+	width: 90%;	height:150px;
+	margin: auto;
+	/*background: white;*/
+}
