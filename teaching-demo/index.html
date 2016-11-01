@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>teaching demo</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="block">
+			<li class="blockItem"></li>
+			<li class="blockItem"></li>
+			<li class="blockItem"></li>
+			<li class="blockItem"></li>
+			<li class="blockItem"></li>
+		</ul>
+		<ul class="controlHolder">
+			<li class="controlPoint" style="background:#5CADAD;" data-index="1"></li>
+			<li class="controlPoint" data-index="2"></li>
+			<li class="controlPoint" data-index="3"></li>
+			<li class="controlPoint" data-index="4"></li>
+			<li class="controlPoint" data-index="5"></li>
+		</ul>
+	</div>
+	<script>
+		(function(){
+			controlHolder = document.querySelector('.controlHolder');
+			controlPoints = document.querySelectorAll('.controlPoint');
+			blocks = document.querySelectorAll('.blockItem');
+			function change_others(){
+				for(var item of blocks )
+					item.style.visibility = "hidden";
+				for(var item of controlPoints )
+					item.style.backgroundColor = "#ffffff";
+			}
+			function change(e){
+				var item = e.target;
+				if( item.getAttribute("data-index")==undefined || item.getAttribute("data-index")==null )
+					return;
+				index = parseInt(item.getAttribute("data-index"));
+				change_others();
+				item.style.backgroundColor = "#5CADAD";
+				blocks[ index-1 ].style.visibility = "visible";
+			};
+			controlHolder.onmouseover = function (e){
+				change(e);
+			};
+			controlHolder.onclick = function (e){
+				change(e);
+			};
+
+			function show(){
+				container = document.querySelector('.container');
+				container.className="container pop-up";
+				console.log(container.className);
+			}
+			setTimeout(show(),1000);
+		}
+		)();
+		
+	</script>
+</body>
+</html>

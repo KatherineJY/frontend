@@ -1,0 +1,80 @@
+*{
+	box-sizing: border-box;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+.container{
+	width: 60%;
+	height: 80%;
+	/*background: #000;*/
+	margin: auto;
+	top:0;right: 0;bottom: -20%;left:0;
+	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease-in-out;
+}
+.pop-up{
+	bottom:10%;
+	opacity: 1;
+	visibility: visible;
+}
+.block{
+	width: 100%;
+	height: calc(98% - 40px - 50px);
+	margin: 0;
+	top:0;right: 0;bottom: 0;left:0;
+	/*background: #ffffff;*/
+}
+.blockItem{
+	width: 100%;
+	height: calc(98% - 40px - 50px);
+	position: absolute;
+	border: 20px solid transparent;
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	left:0;
+	visibility: hidden;
+	/*background: #fff000;*/
+}
+.blockItem:nth-of-type(1){
+	background: 	#D1E9E9;
+	visibility: visible;
+}
+.blockItem:nth-of-type(2){
+	background: 	#C4E1E1;
+}
+.blockItem:nth-of-type(3){
+	background: 	#B3D9D9;
+}
+.blockItem:nth-of-type(4){
+	background: 	#A3D1D1;
+}
+.blockItem:nth-of-type(5){
+	background: 	#95CACA;
+}
+.controlHolder{
+	width: 175px;
+	height:50px;
+	position: relative;
+	left:50%;
+	margin-left:-95px;
+	margin-top: 40px;
+}
+.controlPoint{
+	width: 20px;
+	height: 20px;
+	margin-left: 15px;
+	border-radius: 10px;
+	float: left;
+	position: relative;
+	display: inline-block;
+	background: #ffffff;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
