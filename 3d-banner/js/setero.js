@@ -1,0 +1,3 @@
+var seteroscopic_item = {
+	
+}
