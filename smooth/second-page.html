@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>second</title>
+    <style>
+            body{
+                width: 100vw;
+                height: 100vh;
+                box-sizing: border-box;
+                margin:0;
+                background: rgba(112,124,116,0.8);
+            }
+            .container{
+                width:350px;
+                height:250px;
+                box-sizing: border-box;
+                padding: 20px;
+                position: absolute;
+                left:0;right:0;top:0;bottom:0;
+                margin:auto;
+                background: linear-gradient(0deg,rgba(28,28,28,1) 88%,rgba(101,103,101,1) 88%);
+                box-shadow: 3px 3px 1px rgba(0,0,0,0.2);
+                border-radius: 15px;
+                cursor: pointer;
+                transition: 1.5s ease-in;
+                opacity: 0;
+                color:white;
+                text-align: middle;
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>two</h1>
+    </div>
+
+    <script>
+        var container = document.querySelector(".container");
+        
+        setTimeout(function(){
+            container.style.opacity = "1";
+        },50);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>blur</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            margin:0;
+            background: rgba(58, 28, 32,1);
+        }
+        .container{
+            width:350px;
+            height:250px;
+            padding: 30px;
+            box-sizing: border-box;
+            position: absolute;
+            left:0;right:0;top:0;bottom:0;
+            margin:auto;
+            background: url(img/bg.JPG);
+        }
+        .container::before{
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            left:0;right:0;top:0;bottom:0;
+            z-index: -1;
+            margin:auto;
+            background: url(img/bg.JPG);
+            filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+  
+    </div>
+</body>
+</html>
